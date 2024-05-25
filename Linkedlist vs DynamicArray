@@ -1,0 +1,84 @@
+Time Complexity
+Operation	   Singly Linked List	Dynamic Array
+Insert at beginning   	O(1)      	O(n)
+Insert at end	        O(n)	        O(1) amortized
+Insert at middle	O(n)	        O(n)
+Delete from beginning	O(1)	        O(n)
+Delete from end   	O(n)	        O(1)
+Delete from middle	O(n)	        O(n)
+Get size	        O(1)	        O(1)
+Check if empty	        O(1)	        O(1)
+Rotate	                O(n)	        O(n)
+Reverse	                O(n)	        O(n)
+Append	                O(n)	        O(1) amortized
+Prepend	                O(1)	        O(n)
+Merge	                O(n)	        O(n)
+Interleave	        O(n)	        O(n)
+Get middle	        O(n)	        O(1)
+Index of element	O(n)	        O(n)
+Split	                O(n)	        O(n)
+
+
+
+
+Space Complexity
+Operation	Singly Linked List	              Dynamic Array
+Overall         	O(n)	                         O(n)
+Insert/Delete	        O(1) extra per operation	 O(1) extra per operation
+Resize	                N/A	                         O(n)
+
+
+
+Advantages and Disadvantages
+Singly Linked List
+
+Advantages:
+
+1.Dynamic Size: Can grow and shrink in size by simply adjusting pointers, without the need for resizing.
+
+2.Efficient Insertions/Deletions: Efficient at inserting and deleting nodes at the beginning or middle of the list without shifting elements.
+
+3.Memory Usage: No need to allocate a large contiguous block of memory, which is useful when memory is fragmented.
+
+
+Disadvantages:
+
+1.Memory Overhead: Requires extra memory for storing pointers in each node.
+
+2.Access Time: O(n) time complexity for accessing elements by index, making random access inefficient.
+
+
+3.Cache Performance: Poor cache performance compared to dynamic arrays due to non-contiguous memory allocation.
+
+
+Dynamic Array
+
+Advantages:
+
+1.Random Access: O(1) time complexity for accessing elements by index, providing fast random access.
+
+
+2.Memory Efficiency: Better cache performance and memory usage due to contiguous memory allocation.
+
+
+3.Amortized Append: Efficient append operation with O(1) amortized time complexity.
+
+
+Disadvantages:
+
+1.Resizing Overhead: May require resizing and copying elements to a new array, which can be costly.
+
+
+2.Insertion/Deletion: Inefficient for insertions and deletions in the middle of the array due to the need to shift elements.
+
+
+3.Fixed Capacity: Needs to resize the array when the capacity is exceeded, which can cause temporary spikes in memory usage.
+
+
+Summary
+
+Use a linked list when you need efficient insertions and deletions at arbitrary positions and you do not require random access.
+
+
+Use a dynamic array when you need efficient random access and mostly append operations with occasional resizing.
+
